@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let path = window.location.pathname;
+
+if (path === "/" || path === "/movies" || path === "/tv"){
+  import("./Landing/LandingCSS.js").then(() => {
+    console.log("Basic CSS Loaded");
+  })
+}
+else{
+  import("./NotFoundCSS.js").then(() => {
+    console.log("Not Found CSS Loaded");
+  })
+}
+
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.querySelector('body') as HTMLElement
 );
+
+
 root.render(
   <React.StrictMode>
     <App />

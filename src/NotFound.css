@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NotFoundText{
+    font-family: 'Poppins';
+    font-size: 54px;
+    font-weight: 500;
+    color: rgb(35, 47, 128);
+}
